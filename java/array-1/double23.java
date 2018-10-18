@@ -2,16 +2,21 @@
  * The array will be length 0, 1, or 2.
  */
 public boolean double23(int[] nums) {
-    int count2 = 0;
-    int count3 = 0;
-      
-    for(int i = 0; i < nums.length; i++) {
-        if(nums[i] == 2)
-            count2++;
-                        
-        if(nums[i] == 3)
-            count3++;
+  int count2=0;
+  int count3=0;
+  for(int i: nums){
+  if(i==2){
+    count2=count2+1;
+    if(count2==2){
+      return true;
     }
-                                      
-    return count2 == 2 || count3 == 2;
+  }
+  else if(i==3){
+    count3=count3+1;
+    if(count3==2){
+      return true;
+    }
+  }
+ }
+    return false;
 }
